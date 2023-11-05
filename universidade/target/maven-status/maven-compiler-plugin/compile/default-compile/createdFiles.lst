@@ -1,0 +1,4 @@
+com\unip\universidade\UniversidadeApplication.class
+com\unip\universidade\controller\AlunoController.class
+com\unip\universidade\model\aluno.class
+com\unip\universidade\model\AlunoService.class

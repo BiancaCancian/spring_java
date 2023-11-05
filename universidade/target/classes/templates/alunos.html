@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Lista de Alunos</h1>
+        <table class="table table-bordered table-striped mt-4">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="aluno : ${listaDeAlunos}">
+                    <td th:text="${aluno.matricula}"></td>
+                    <td th:text="${aluno.nome}"></td>
+                    <td th:text="${#dates.format(aluno.dataNascimento, 'dd/MM/yyyy')}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
